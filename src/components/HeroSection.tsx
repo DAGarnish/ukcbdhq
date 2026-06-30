@@ -34,12 +34,6 @@ export default function HeroSection() {
         aria-hidden="true"
       />
 
-      {/* Top dark gradient to ensure header contrast */}
-      <div
-        className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-black/50 to-transparent pointer-events-none z-0"
-        aria-hidden="true"
-      />
-
       {/* Decorative arc — desktop only */}
       <div
         className="hidden lg:block absolute right-0 top-0 bottom-0 w-[45%] pointer-events-none"
@@ -61,7 +55,7 @@ export default function HeroSection() {
           {/* Main headline */}
           <h1
             id="hero-heading"
-            className="animate-fade-up delay-100 font-display text-5xl sm:text-6xl lg:text-7xl font-normal text-white leading-[1.08] tracking-tight mb-6 drop-shadow-sm"
+            className="animate-fade-up delay-100 font-display text-5xl sm:text-6xl lg:text-7xl font-light text-white leading-[1.08] tracking-tight mb-6"
           >
             High-Strength CBD
             <br />
@@ -73,7 +67,7 @@ export default function HeroSection() {
           </h1>
 
           {/* Subheadline */}
-          <p className="animate-fade-up delay-200 font-body text-white/90 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl drop-shadow-sm">
+          <p className="animate-fade-up delay-200 font-body text-white/75 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl">
             Premium external-use CBD formulations, crafted in Spain to rigorous
             EU standards. Designed for UK customers who expect more — more
             potency, more precision, more transparency.

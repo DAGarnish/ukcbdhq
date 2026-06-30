@@ -43,15 +43,15 @@ export default function Header() {
           >
             <span className="flex items-center gap-1.5">
               <span
-                className={`font-display text-xl font-bold tracking-tight transition-colors duration-300 ${
-                  isScrolled ? 'text-[#1a3329]' : 'text-white drop-shadow-md'
+                className={`font-display text-xl font-semibold tracking-tight transition-colors duration-300 ${
+                  isScrolled ? 'text-[#1a3329]' : 'text-white'
                 }`}
               >
                 UKCBD
               </span>
               <span
-                className={`font-display text-xl font-bold tracking-tight transition-colors duration-300 ${
-                  isScrolled ? 'text-[#b8965a]' : 'text-[#d4af7a] drop-shadow-md'
+                className={`font-display text-xl font-semibold tracking-tight transition-colors duration-300 ${
+                  isScrolled ? 'text-[#b8965a]' : 'text-[#d4af7a]'
                 }`}
               >
                 HQ
@@ -65,8 +65,8 @@ export default function Header() {
               <Link
                 key={href}
                 href={href}
-                className={`text-sm font-semibold tracking-wide transition-colors duration-200 hover:text-[#b8965a] ${
-                  isScrolled ? 'text-[#2e2e2e]' : 'text-white drop-shadow-md'
+                className={`text-sm font-medium tracking-wide transition-colors duration-200 hover:text-[#b8965a] ${
+                  isScrolled ? 'text-[#2e2e2e]' : 'text-white/90'
                 }`}
               >
                 {label}
