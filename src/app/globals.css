@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme {
+:root {
   /* Brand Palette */
   --color-forest: #1a3329;
   --color-forest-light: #254a3b;
@@ -35,6 +35,39 @@
   --shadow-subtle: 0 1px 3px 0 rgba(26, 51, 41, 0.08), 0 1px 2px -1px rgba(26, 51, 41, 0.05);
   --shadow-card: 0 4px 16px -4px rgba(26, 51, 41, 0.12), 0 2px 6px -2px rgba(26, 51, 41, 0.06);
   --shadow-elevated: 0 16px 48px -12px rgba(26, 51, 41, 0.18), 0 4px 12px -4px rgba(26, 51, 41, 0.08);
+}
+
+@theme {
+  --color-forest: var(--color-forest);
+  --color-forest-light: var(--color-forest-light);
+  --color-hemp: var(--color-hemp);
+  --color-sage: var(--color-sage);
+  --color-sage-light: var(--color-sage-light);
+  --color-cream: var(--color-cream);
+  --color-cream-dark: var(--color-cream-dark);
+  --color-parchment: var(--color-parchment);
+  --color-charcoal: var(--color-charcoal);
+  --color-charcoal-light: var(--color-charcoal-light);
+  --color-warm-grey: var(--color-warm-grey);
+  --color-gold: var(--color-gold);
+  --color-gold-light: var(--color-gold-light);
+  --color-gold-pale: var(--color-gold-pale);
+  --color-white: var(--color-white);
+  --color-border: var(--color-border);
+  --color-border-dark: var(--color-border-dark);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+  --radius-full: var(--radius-full);
+
+  --shadow-subtle: var(--shadow-subtle);
+  --shadow-card: var(--shadow-card);
+  --shadow-elevated: var(--shadow-elevated);
 }
 
 /* ───── Global Reset & Base ───── */
