@@ -1,73 +1,35 @@
 @import "tailwindcss";
 
-:root {
+/* ─── Tailwind v4: register design tokens as static literals ─── */
+@theme inline {
   /* Brand Palette */
-  --color-forest: #1a3329;
-  --color-forest-light: #254a3b;
-  --color-hemp: #3d6b52;
-  --color-sage: #7a9e8a;
-  --color-sage-light: #a8c4b4;
-  --color-cream: #f5f1ea;
-  --color-cream-dark: #ede8df;
-  --color-parchment: #faf7f2;
-  --color-charcoal: #1c1c1c;
+  --color-forest:         #1a3329;
+  --color-forest-light:   #254a3b;
+  --color-hemp:           #3d6b52;
+  --color-sage:           #7a9e8a;
+  --color-sage-light:     #a8c4b4;
+  --color-cream:          #f5f1ea;
+  --color-cream-dark:     #ede8df;
+  --color-parchment:      #faf7f2;
+  --color-charcoal:       #1c1c1c;
   --color-charcoal-light: #2e2e2e;
-  --color-warm-grey: #6b6b6b;
-  --color-gold: #b8965a;
-  --color-gold-light: #d4af7a;
-  --color-gold-pale: #f0e8d6;
-  --color-white: #ffffff;
-  --color-border: #d6cfc4;
-  --color-border-dark: #c4bbae;
+  --color-warm-grey:      #6b6b6b;
+  --color-gold:           #b8965a;
+  --color-gold-light:     #d4af7a;
+  --color-gold-pale:      #f0e8d6;
+  --color-border:         #d6cfc4;
+  --color-border-dark:    #c4bbae;
 
-  /* Typography */
-  --font-display: var(--font-cormorant);
-  --font-body: var(--font-inter);
+  /* Font families — resolved at runtime via CSS var from next/font */
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-body:    var(--font-inter), system-ui, sans-serif;
 
-  /* Spacing & Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
+  /* Radius scale */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
   --radius-full: 9999px;
-
-  /* Shadows */
-  --shadow-subtle: 0 1px 3px 0 rgba(26, 51, 41, 0.08), 0 1px 2px -1px rgba(26, 51, 41, 0.05);
-  --shadow-card: 0 4px 16px -4px rgba(26, 51, 41, 0.12), 0 2px 6px -2px rgba(26, 51, 41, 0.06);
-  --shadow-elevated: 0 16px 48px -12px rgba(26, 51, 41, 0.18), 0 4px 12px -4px rgba(26, 51, 41, 0.08);
-}
-
-@theme {
-  --color-forest: var(--color-forest);
-  --color-forest-light: var(--color-forest-light);
-  --color-hemp: var(--color-hemp);
-  --color-sage: var(--color-sage);
-  --color-sage-light: var(--color-sage-light);
-  --color-cream: var(--color-cream);
-  --color-cream-dark: var(--color-cream-dark);
-  --color-parchment: var(--color-parchment);
-  --color-charcoal: var(--color-charcoal);
-  --color-charcoal-light: var(--color-charcoal-light);
-  --color-warm-grey: var(--color-warm-grey);
-  --color-gold: var(--color-gold);
-  --color-gold-light: var(--color-gold-light);
-  --color-gold-pale: var(--color-gold-pale);
-  --color-white: var(--color-white);
-  --color-border: var(--color-border);
-  --color-border-dark: var(--color-border-dark);
-
-  --font-display: var(--font-display);
-  --font-body: var(--font-body);
-
-  --radius-sm: var(--radius-sm);
-  --radius-md: var(--radius-md);
-  --radius-lg: var(--radius-lg);
-  --radius-xl: var(--radius-xl);
-  --radius-full: var(--radius-full);
-
-  --shadow-subtle: var(--shadow-subtle);
-  --shadow-card: var(--shadow-card);
-  --shadow-elevated: var(--shadow-elevated);
 }
 
 /* ───── Global Reset & Base ───── */
@@ -85,15 +47,15 @@ html {
 }
 
 body {
-  background-color: var(--color-parchment);
-  color: var(--color-charcoal);
-  font-family: var(--font-body), system-ui, sans-serif;
+  background-color: #faf7f2;
+  color: #1c1c1c;
+  font-family: var(--font-inter), system-ui, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ───── Scroll reveal animation ───── */
+/* ───── Animations ───── */
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -121,19 +83,15 @@ body {
   }
 }
 
-.animate-fade-up {
-  animation: fade-up 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
 }
 
-.animate-fade-in {
-  animation: fade-in 0.5s ease both;
-}
+.animate-fade-up   { animation: fade-up    0.65s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-fade-in   { animation: fade-in    0.5s ease both; }
+.animate-slide-down { animation: slide-down 0.35s ease both; }
 
-.animate-slide-down {
-  animation: slide-down 0.35s ease both;
-}
-
-/* Staggered delay utilities */
 .delay-100 { animation-delay: 100ms; }
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
@@ -144,58 +102,51 @@ body {
 
 /* ───── Typography Utilities ───── */
 .font-display {
-  font-family: var(--font-display), Georgia, serif;
+  font-family: var(--font-cormorant), Georgia, serif;
 }
 
 .font-body {
-  font-family: var(--font-body), system-ui, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
 }
 
-/* ───── Custom scrollbar ───── */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--color-cream);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-sage);
-  border-radius: 3px;
-}
+/* ───── Custom Scrollbar ───── */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: #f5f1ea; }
+::-webkit-scrollbar-thumb  { background: #7a9e8a; border-radius: 3px; }
 
-/* ───── Focus styles ───── */
+/* ───── Focus ───── */
 :focus-visible {
-  outline: 2px solid var(--color-hemp);
+  outline: 2px solid #3d6b52;
   outline-offset: 3px;
   border-radius: 3px;
 }
 
-/* ───── Section divider ───── */
+/* ───── Section Divider ───── */
 .section-divider {
   width: 48px;
   height: 2px;
-  background: linear-gradient(90deg, var(--color-gold), var(--color-gold-light));
+  background: linear-gradient(90deg, #b8965a, #d4af7a);
   border-radius: 1px;
 }
 
-/* ───── Gold gradient text ───── */
+/* ───── Gold Gradient Text ───── */
 .text-gold-gradient {
-  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 100%);
+  background: linear-gradient(135deg, #b8965a 0%, #d4af7a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* ───── Forest gradient backgrounds ───── */
+/* ───── Forest Gradient Backgrounds ───── */
 .bg-forest-gradient {
-  background: linear-gradient(135deg, var(--color-forest) 0%, var(--color-forest-light) 50%, #1e4035 100%);
+  background: linear-gradient(135deg, #1a3329 0%, #254a3b 50%, #1e4035 100%);
 }
 
 .bg-sage-gradient {
-  background: linear-gradient(135deg, var(--color-sage) 0%, var(--color-hemp) 100%);
+  background: linear-gradient(135deg, #7a9e8a 0%, #3d6b52 100%);
 }
 
-/* ───── Glass card effect ───── */
+/* ───── Glass Card ───── */
 .glass-card {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(12px);
@@ -203,7 +154,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-/* ───── Trust badge ───── */
+/* ───── Trust Badge ───── */
 .trust-badge {
   display: inline-flex;
   align-items: center;
@@ -215,21 +166,17 @@ body {
   font-size: 0.8125rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  color: rgba(255,255,255,0.92);
+  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--font-inter), system-ui, sans-serif;
 }
 
-/* ───── Product card shimmer ───── */
-@keyframes shimmer {
-  0%   { background-position: -400px 0; }
-  100% { background-position: 400px 0; }
-}
-
+/* ───── Product Shimmer ───── */
 .product-placeholder {
   background: linear-gradient(
     90deg,
-    var(--color-sage-light) 25%,
-    var(--color-sage) 50%,
-    var(--color-sage-light) 75%
+    #a8c4b4 25%,
+    #7a9e8a 50%,
+    #a8c4b4 75%
   );
   background-size: 800px 100%;
   animation: shimmer 2.5s infinite linear;
