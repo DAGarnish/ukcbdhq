@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme inline {
+@theme {
   /* Brand Palette */
   --color-forest: #1a3329;
   --color-forest-light: #254a3b;
