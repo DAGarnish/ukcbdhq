@@ -9,14 +9,39 @@ export default function Waitlist() {
   const [interest, setInterest] = useState('');
   const [consent, setConsent] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-
   const [queuePosition, setQueuePosition] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (name && email && consent) {
+    if (!name || !email || !consent) return;
+
+    setLoading(true);
+    setError('');
+
+    try {
+      const response = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, interest, consent }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to submit request.");
+      }
+
       setQueuePosition(Math.floor(Math.random() * 400) + 102);
       setSubmitted(true);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "An unexpected error occurred.";
+      setError(message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -30,6 +55,12 @@ export default function Waitlist() {
               <p className="waitlist-sub">
                 Our initial batch is strictly limited due to precise laboratory scheduling. Secure your place now to lock in priority access and member-only pricing.
               </p>
+
+              {error && (
+                <div style={{ color: '#ff6b6b', backgroundColor: 'rgba(255, 107, 107, 0.1)', padding: '0.95rem 1.25rem', borderRadius: '3px', marginBottom: '1.75rem', fontSize: '0.9rem', border: '1px solid rgba(255, 107, 107, 0.2)', textAlign: 'left', fontFamily: 'var(--font-sans)' }}>
+                  {error}
+                </div>
+              )}
 
               <form onSubmit={handleSubmit} className="waitlist-form-wrapper">
                 <div className="form-group-grid">
@@ -91,9 +122,9 @@ export default function Waitlist() {
                   </label>
                 </div>
 
-                <button type="submit" className="btn btn-gold waitlist-submit-btn">
+                <button type="submit" className="btn btn-gold waitlist-submit-btn" disabled={loading}>
                   <span className="flex items-center justify-center" style={{ gap: '0.5rem' }}>
-                    Request Priority Access <ArrowRight size={16} />
+                    {loading ? "Requesting Access..." : "Request Priority Access"} <ArrowRight size={16} />
                   </span>
                 </button>
               </form>
