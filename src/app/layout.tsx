@@ -1,25 +1,38 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
+  variable: "--font-cormorant",
 });
 
 const inter = Inter({
-  variable: "--font-inter",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "UKCBDHQ — Premium CBD Topicals & Patches",
-  description: "High-strength CBD topicals and patches. Launching in the UK.",
+  title: "UKCBDHQ | Premium CBD Topicals & Patches",
+  description: "Specialist high-strength CBD patches and topicals for targeted external use. Formulated in Spain to strict European cosmetic compliance and quality standards.",
+  openGraph: {
+    title: "UKCBDHQ | Premium High-Strength CBD Topicals & Patches",
+    description: "Discover a premium range of Spanish-crafted external CBD patches and topicals. Fully compliant, third-party lab tested, and engineered for targeted wellness.",
+    type: "website",
+    locale: "en_GB",
+    siteName: "UKCBDHQ",
+  },
 };
 
 export default function RootLayout({
