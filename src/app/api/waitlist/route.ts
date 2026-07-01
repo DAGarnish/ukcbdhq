@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
+import { sendWaitlistEmail } from "@/lib/mail";
 
 export async function POST(request: Request) {
   try {
@@ -30,6 +31,9 @@ export async function POST(request: Request) {
         consent,
       },
     });
+
+    // Send notification and subscriber confirmation emails
+    await sendWaitlistEmail({ name, email, interest });
 
     return NextResponse.json({ success: true, entry: newEntry }, { status: 201 });
   } catch (error) {
