@@ -38,6 +38,9 @@ export const metadata: Metadata = {
   },
 };
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -47,6 +50,7 @@ export default function RootLayout({
     <html lang="en-GB" className={`${cormorant.variable} ${inter.variable}`}>
       <body>
         {children}
+        <ToastContainer position="bottom-right" theme="dark" autoClose={5000} />
       </body>
     </html>
   );

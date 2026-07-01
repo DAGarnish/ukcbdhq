@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { MailCheck, ArrowRight, ShieldCheck } from 'lucide-react';
+import { toast } from 'react-toastify';
 
 export default function Waitlist() {
   const [name, setName] = useState('');
@@ -37,9 +38,11 @@ export default function Waitlist() {
 
       setQueuePosition(Math.floor(Math.random() * 400) + 102);
       setSubmitted(true);
+      toast.success(`Welcome to the VIP waitlist, ${name}!`);
     } catch (err) {
       const message = err instanceof Error ? err.message : "An unexpected error occurred.";
       setError(message);
+      toast.error(message);
     } finally {
       setLoading(false);
     }
@@ -123,9 +126,19 @@ export default function Waitlist() {
                 </div>
 
                 <button type="submit" className="btn btn-gold waitlist-submit-btn" disabled={loading}>
-                  <span className="flex items-center justify-center" style={{ gap: '0.5rem' }}>
-                    {loading ? "Requesting Access..." : "Request Priority Access"} <ArrowRight size={16} />
-                  </span>
+                  {loading ? (
+                    <span className="flex items-center justify-center" style={{ gap: '0.5rem' }}>
+                      <svg className="animate-spin" style={{ width: '18px', height: '18px', fill: 'none', stroke: 'currentColor', strokeWidth: '3' }} viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" strokeOpacity="0.25" />
+                        <path d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" fill="currentColor" />
+                      </svg>
+                      Requesting Access...
+                    </span>
+                  ) : (
+                    <span className="flex items-center justify-center" style={{ gap: '0.5rem' }}>
+                      Request Priority Access <ArrowRight size={16} />
+                    </span>
+                  )}
                 </button>
               </form>
             </>
