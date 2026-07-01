@@ -22,8 +22,8 @@ export default function Header() {
             <li><a href="#why-spain" className="nav-link">Why Spain</a></li>
             <li><a href="#products" className="nav-link">Products</a></li>
             <li><a href="#why-topicals" className="nav-link">Why Topicals</a></li>
-            <li><a href="#compliance" className="nav-link">Compliance</a></li>
             <li><a href="#labs" className="nav-link">Labs</a></li>
+            <li><a href="#compliance" className="nav-link">Compliance</a></li>
           </ul>
         </nav>
 
@@ -44,8 +44,8 @@ export default function Header() {
           <li><a href="#why-spain" className="mobile-nav-link" onClick={closeMenu}>Why Spain</a></li>
           <li><a href="#products" className="mobile-nav-link" onClick={closeMenu}>Products</a></li>
           <li><a href="#why-topicals" className="mobile-nav-link" onClick={closeMenu}>Why Topicals</a></li>
-          <li><a href="#compliance" className="mobile-nav-link" onClick={closeMenu}>Compliance</a></li>
           <li><a href="#labs" className="mobile-nav-link" onClick={closeMenu}>Labs</a></li>
+          <li><a href="#compliance" className="mobile-nav-link" onClick={closeMenu}>Compliance</a></li>
         </ul>
         <a 
           href="#waitlist" 
