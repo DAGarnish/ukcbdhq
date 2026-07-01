@@ -14,7 +14,7 @@ export async function sendWaitlistEmail({
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASSWORD;
   const from = process.env.EMAIL_FROM || '"UKCBDHQ" <no-reply@ukcbdhq.co.uk>';
-  const adminRecipient = process.env.EMAIL_TO; // Admin email to receive sign-up alerts
+  const adminRecipient = process.env.RECEIVER_EMAIL || "abhisespoudyal@gmail.com";
 
   if (!host || !port || !user || !pass) {
     console.warn("SMTP credentials are not fully configured in environment variables. Email sending skipped.");
@@ -59,7 +59,7 @@ export async function sendWaitlistEmail({
   // 2. Send alert email to admin
   const adminMailOptions = {
     from,
-    to: adminRecipient || user, // fallback to SMTP user if EMAIL_TO is unset
+    to: adminRecipient,
     subject: `[Lead] New Waitlist Sign-up: ${name}`,
     html: `
       <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #222222;">
