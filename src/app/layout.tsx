@@ -26,6 +26,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "UKCBDHQ | Premium CBD Topicals & Patches",
   description: "Specialist high-strength CBD patches and topicals for targeted external use. Formulated in Spain to strict European cosmetic compliance and quality standards.",
+  icons: {
+    icon: "/favicon.png",
+  },
   openGraph: {
     title: "UKCBDHQ | Premium High-Strength CBD Topicals & Patches",
     description: "Discover a premium range of Spanish-crafted external CBD patches and topicals. Fully compliant, third-party lab tested, and engineered for targeted wellness.",

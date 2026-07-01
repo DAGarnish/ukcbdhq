@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="hero-shape-2"></div>
       </div>
       <div className="container hero-container">
-        <div className="hero-content">
+        <div className="hero-content animate-fade">
           <span className="hero-tagline">Premium European Formulation</span>
           <h1 className="hero-headline">
             High-Strength CBD Topicals & Patches.<br />
