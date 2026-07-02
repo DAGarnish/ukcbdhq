@@ -9,13 +9,13 @@ export default function Hero() {
       </div>
       <div className="container hero-container">
         <div className="hero-content animate-fade">
-          <span className="hero-tagline">Premium European Formulation</span>
+          <span className="hero-tagline">Tired of low-dose CBD?</span>
           <h1 className="hero-headline">
-            High-Strength CBD Topicals & Patches.<br />
-            <span style={{ color: 'var(--color-gold)' }}>Refined for the UK.</span>
+            The Antigravity Lift.<br />
+            <span style={{ color: 'var(--color-gold)' }}>High-Strength Patches & Topicals.</span>
           </h1>
           <p className="hero-subheadline">
-            Introducing a premium range of external-use formulas, meticulously crafted in Spain. Engineered to strict EU quality standards for targeted, everyday physical comfort and skin nourishment.
+            Discover the UK's highest potency transdermal CBD patches & muscle recovery balms. Formulated in Spain to remove structural pressure, pain, and stiffness. 100% legal, shipped DDP.
           </p>
           <div className="hero-ctas">
             <a href="#waitlist" className="btn btn-gold">Join the VIP Waitlist</a>
