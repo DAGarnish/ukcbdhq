@@ -38,7 +38,7 @@ export default function Waitlist() {
 
       setQueuePosition(Math.floor(Math.random() * 400) + 102);
       setSubmitted(true);
-      toast.success(`Welcome to the VIP waitlist, ${name}!`);
+      toast.success(`Welcome to the waitlist, ${name}!`);
     } catch (err) {
       const message = err instanceof Error ? err.message : "An unexpected error occurred.";
       setError(message);
@@ -121,7 +121,7 @@ export default function Waitlist() {
                     required
                   />
                   <label htmlFor="waitlist-consent" className="form-checkbox-label">
-                    I agree to receive pre-launch notifications, laboratory updates, and exclusive VIP offers from UKCBDHQ. I understand that I can unsubscribe at any time.
+                    I agree to receive pre-launch notifications, laboratory updates, and exclusive offers from UKCBDHQ. I understand that I can unsubscribe at any time.
                   </label>
                 </div>
 
@@ -149,11 +149,11 @@ export default function Waitlist() {
               </div>
               <h2 className="success-title">Invitation Request Received</h2>
               <p className="success-message">
-                Thank you, <strong>{name}</strong>. We have registered <strong>{email}</strong> for our VIP pre-launch allocation pool.
+                Thank you, <strong>{name}</strong>. We have registered <strong>{email}</strong> for our pre-launch allocation pool.
               </p>
               <div className="success-share">
                 <span className="flex items-center justify-center" style={{ gap: '0.5rem' }}>
-                  <ShieldCheck size={16} /> Queue Position: #{queuePosition.toLocaleString()} | VIP Priority Status Activated
+                  <ShieldCheck size={16} /> Queue Position: #{queuePosition.toLocaleString()} | Priority Status Activated
                 </span>
               </div>
               <p style={{ fontSize: '0.8rem', color: 'rgba(250,248,245,0.5)', marginTop: '1.5rem', marginBottom: 0 }}>

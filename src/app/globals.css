@@ -800,11 +800,11 @@ a {
 
 .product-visual-wrapper {
   background-color: var(--color-cream-dark);
-  padding: 3.5rem 2.5rem;
+  padding: 3rem 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 4/3;
+  aspect-ratio: 1 / 1;
   position: relative;
   overflow: hidden;
 }
@@ -827,15 +827,15 @@ a {
 }
 
 .product-mockup {
-  width: 105px;
-  height: 145px;
+  width: 140px;
+  height: 190px;
   border-radius: 4px;
   position: relative;
   box-shadow: var(--shadow-md), 0 10px 20px rgba(11,26,19,0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.15rem;
+  padding: 1rem;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -861,6 +861,11 @@ a {
 
 .product-mockup-cream {
   background: linear-gradient(135deg, #30473a 0%, #12281c 100%);
+  border: 1px solid rgba(197, 168, 128, 0.25);
+}
+
+.product-mockup-serum {
+  background: linear-gradient(135deg, #243129 0%, #0c150f 100%);
   border: 1px solid rgba(197, 168, 128, 0.25);
 }
 

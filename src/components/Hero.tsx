@@ -18,7 +18,7 @@ export default function Hero() {
             Discover the UK's highest potency transdermal CBD patches & muscle recovery balms. Formulated in Spain to remove structural pressure, pain, and stiffness. 100% legal, shipped DDP.
           </p>
           <div className="hero-ctas">
-            <a href="#waitlist" className="btn btn-gold">Join the VIP Waitlist</a>
+            <a href="#waitlist" className="btn btn-gold">Join the Waitlist</a>
             <a href="#products" className="btn btn-secondary">Explore the Range</a>
           </div>
           <div className="hero-bullets">

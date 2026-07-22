@@ -35,7 +35,7 @@ export async function sendWaitlistEmail({
   const subscriberMailOptions = {
     from,
     to: email,
-    subject: "UKCBDHQ — VIP Sourcing Invitation Request Received",
+    subject: "UKCBDHQ — Sourcing Invitation Request Received",
     html: `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #faf8f5; margin: 0; padding: 40px 20px; color: #2d3b32;">
         <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 580px; background-color: #0b1a13; border-radius: 8px; overflow: hidden; box-shadow: 0 10px 30px rgba(11,26,19,0.08); border: 1px solid rgba(197, 168, 128, 0.2);">
@@ -69,7 +69,7 @@ export async function sendWaitlistEmail({
                         <td style="padding-bottom: 10px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: #8c7e6c; font-weight: 600; text-align: right;">Allocation Category</td>
                       </tr>
                       <tr>
-                        <td style="font-family: Georgia, serif; font-size: 16px; color: #0b1a13;">VIP Priority Active</td>
+                        <td style="font-family: Georgia, serif; font-size: 16px; color: #0b1a13;">Priority Active</td>
                         <td style="font-family: Georgia, serif; font-size: 16px; color: #0b1a13; text-align: right; text-transform: capitalize;">${interest || "General Range"}</td>
                       </tr>
                     </table>

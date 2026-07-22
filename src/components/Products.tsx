@@ -61,6 +61,16 @@ const products: ProductItem[] = [
     volume: "75ml Tube",
     ingredients: "Pure CBD, Rosehip seed oil, Calendula, Vitamin E",
     mockClass: "product-mockup-cream"
+  },
+  {
+    category: "Topical Serums",
+    title: "Targeted Relief Serum",
+    potency: "1200mg Active CBD",
+    description: "A high-concentration, fast-absorbing botanical serum designed for precise application on targeted pressure points.",
+    format: "Liquid Serum / Roll-on",
+    volume: "15ml Glass Roller",
+    ingredients: "Broad-Spectrum CBD, Arnica Extract, Peppermint",
+    mockClass: "product-mockup-serum"
   }
 ];
 

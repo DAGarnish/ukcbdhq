@@ -44,7 +44,7 @@ export default function WhySpain() {
                 <div>
                   <h3 className="spain-feature-title">DDP-Ready Operational Logistics</h3>
                   <p className="spain-feature-desc">
-                    With import pipelines prepared under Delivered Duty Paid (DDP) terms, our logistics channel is optimized for seamless, hassle-free customs handling into the UK.
+                    With import pipelines prepared under Delivered Duty Paid (DDP) terms, our logistics channel is optimised for seamless, hassle-free customs handling into the UK.
                   </p>
                 </div>
               </div>
@@ -58,7 +58,7 @@ export default function WhySpain() {
               <span style={{ fontSize: '0.65rem', color: 'var(--color-gold)', marginTop: '0.5rem', letterSpacing: '0.15em' }}>EUROPEAN UNION</span>
             </div>
             <p style={{ textAlign: 'center', color: 'rgba(250,248,245,0.7)', fontSize: '0.85rem', marginTop: '2rem', marginBottom: 0, padding: '0 2rem' }}>
-              Strategic manufacturing proximity to key raw ingredients and specialized laboratory partners.
+              Strategic manufacturing proximity to key raw ingredients and specialised laboratory partners.
             </p>
           </div>
         </div>

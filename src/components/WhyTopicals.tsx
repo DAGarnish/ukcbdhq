@@ -7,7 +7,7 @@ export default function WhyTopicals() {
             <span className="section-label" style={{ color: 'var(--color-gold)' }}>Expert Focus</span>
             <h2 className="section-title-left" style={{ textAlign: 'left' }}>Why Topicals & Patches?</h2>
             <p style={{ marginTop: '1.5rem', color: 'rgba(250, 248, 245, 0.8)' }}>
-              Instead of diluting our efforts with oils, drops, and ingestible products, UKCBDHQ focuses exclusively on targeted, external application. We believe the future of CBD is localized, accessible, and integrated smoothly into daily wellness routines.
+              Instead of diluting our efforts with oils, drops, and ingestible products, UKCBDHQ focuses exclusively on targeted, external application. We believe the future of CBD is localised, accessible, and integrated smoothly into daily wellness routines.
             </p>
 
             <div className="topicals-arguments" style={{ marginTop: '2rem' }}>

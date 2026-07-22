@@ -14,8 +14,8 @@ const faqs: FaqItem[] = [
     answer: "Yes. UKCBDHQ is specifically designed to service the UK market. All customs clearances, import duties, and local logistics will be fully managed by us using a Delivered Duty Paid (DDP) shipping pathway, ensuring a seamless delivery directly to your door."
   },
   {
-    question: "Why do you specialize in topicals and patches instead of CBD oils?",
-    answer: "By focusing strictly on external-use cosmetics (patches, gels, and balms), we can specialize in targeted relief and superior skin absorption. Additionally, topical products follow a clear, trusted cosmetic safety pathway rather than the complex, changing regulations associated with ingestible novel foods."
+    question: "Why do you specialise in topicals and patches instead of CBD oils?",
+    answer: "By focusing strictly on external-use cosmetics (patches, gels, and balms), we can specialise in targeted relief and superior skin absorption. Additionally, topical products follow a clear, trusted cosmetic safety pathway rather than the complex, changing regulations associated with ingestible novel foods."
   },
   {
     question: "Will third-party lab reports be available?",
@@ -27,7 +27,7 @@ const faqs: FaqItem[] = [
   },
   {
     question: "When is the official UK product launch?",
-    answer: "We are currently completing our final UK compliance registrations and stability testing. We expect to begin shipping our first batch of products to our VIP waitlist members in the coming months. Joining the waitlist ensures you get first access to our limited initial inventory."
+    answer: "We are currently completing our final UK compliance registrations and stability testing. We expect to begin shipping our first batch of products to our waitlist members in the coming months. Joining the waitlist ensures you get first access to our limited initial inventory."
   },
   {
     question: "Is joining the waitlist free, and what does it include?",

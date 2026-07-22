@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="footer-brand">
             <span className="footer-logo">UKCBDHQ</span>
             <p className="footer-summary">
-              Specializing in high-strength, targeted external-use CBD formulations. Meticulously sourced and manufactured in Spain to meet strict European standards.
+              Specialising in high-strength, targeted external-use CBD formulations. Meticulously sourced and manufactured in Spain to meet strict European standards.
             </p>
           </div>
 
@@ -23,11 +23,7 @@ export default function Footer() {
           </div>
 
           <div className="footer-links-col">
-            <h4 className="footer-links-title">Contact & Support</h4>
-            <div className="footer-contact" style={{ marginBottom: '1rem' }}>
-              <span className="footer-contact-label">Pre-Launch Queries</span>
-              <a href="mailto:hello@ukcbdhq.co.uk" className="footer-contact-value">hello@ukcbdhq.co.uk</a>
-            </div>
+
             <div className="footer-contact">
               <span className="footer-contact-label">Laboratory Sourcing</span>
               <span className="footer-contact-value">Barcelona, Spain</span>
