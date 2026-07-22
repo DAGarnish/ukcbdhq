@@ -91,8 +91,8 @@ export default function RootLayout({
       <body>
         {children}
         <ToastContainer position="bottom-right" theme="dark" autoClose={5000} />
+        <GoogleAnalytics gaId="G-WJXYYF2ETG" />
       </body>
-      <GoogleAnalytics gaId="G-WJXYYF2ETG" />
     </html>
   );
 }
