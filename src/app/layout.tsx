@@ -79,6 +79,7 @@ export const metadata: Metadata = {
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export default function RootLayout({
   children,
@@ -91,6 +92,7 @@ export default function RootLayout({
         {children}
         <ToastContainer position="bottom-right" theme="dark" autoClose={5000} />
       </body>
+      <GoogleAnalytics gaId="G-WJXYYF2ETG" />
     </html>
   );
 }
