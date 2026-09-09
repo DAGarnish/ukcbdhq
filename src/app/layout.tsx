@@ -74,6 +74,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  verification: {
+    google: "eYTlsBNlEqG3eIU9td3BJ7jTqSODOKxUyXeksUMt7sw",
+  },
   metadataBase: new URL("https://www.ukcbdhq.com"),
 };
 
